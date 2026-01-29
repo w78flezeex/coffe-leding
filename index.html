@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ЧЁРНЫЙ — кофейня для своих</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;700;900&family=Nunito:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Зерно летит по экрану -->
+    <div class="flying-beans" aria-hidden="true">
+        <span>☕</span><span>☕</span><span>☕</span>
+    </div>
+
+    <!-- Шапка -->
+    <header class="header">
+        <a href="#" class="logo">
+            <span class="logo-icon">◉</span>
+            <span>ЧЁРНЫЙ</span>
+        </a>
+        <nav>
+            <a href="#menu">чё есть</a>
+            <a href="#vibes">про нас</a>
+            <button class="btn-city" id="openCities">
+                <span class="pin">⚑</span> выбрать город
+            </button>
+        </nav>
+    </header>
+
+    <!-- Главный экран -->
+    <section class="hero">
+        <div class="hero-badge">скидка 30% · ещё <span id="countdown">23:59:59</span></div>
+        
+        <h1>
+            <span class="hero-line">Кофе,</span>
+            <span class="hero-line accent">который тебя</span>
+            <span class="hero-line">не подведёт</span>
+        </h1>
+        
+        <p class="hero-sub">Варим с 2019. Без понтов, только зёрна.</p>
+        
+        <a href="#menu" class="btn-main">
+            <span>к меню</span>
+            <span class="btn-arrow">↓</span>
+        </a>
+
+        <div class="hero-visual">
+            <div class="cup">
+                <div class="cup-body">
+                    <div class="coffee-fill"></div>
+                    <div class="steam">
+                        <i></i><i></i><i></i>
+                    </div>
+                </div>
+                <div class="cup-handle"></div>
+            </div>
+        </div>
+
+        <div class="scroll-hint">
+            <span>листай</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- Меню -->
+    <section class="menu" id="menu">
+        <div class="menu-header">
+            <h2>Меню</h2>
+            <div class="menu-tabs">
+                <button class="tab active" data-tab="coffee">кофе</button>
+                <button class="tab" data-tab="desserts">сладкое</button>
+            </div>
+        </div>
+
+        <!-- Кофе -->
+        <div class="menu-grid" id="coffee">
+            <article class="card">
+                <div class="card-visual">
+                    <div class="card-blob"></div>
+                    <span class="card-emoji">☕</span>
+                </div>
+                <div class="card-info">
+                    <h3>Эспрессо</h3>
+                    <p>30 мл чистой бодрости</p>
+                </div>
+                <div class="card-bottom">
+                    <span class="price">120 ₽</span>
+                    <button class="btn-add">
+                        <span class="plus">+</span>
+                        <span class="text">хочу</span>
+                    </button>
+                </div>
+            </article>
+
+            <article class="card featured">
+                <div class="card-tag">хит</div>
+                <div class="card-visual">
+                    <div class="card-blob"></div>
+                    <span class="card-emoji">🥛</span>
+                </div>
+                <div class="card-info">
+                    <h3>Капучино</h3>
+                    <p>Пенка как облачко</p>
+                </div>
+                <div class="card-bottom">
+                    <span class="price">180 ₽</span>
+                    <button class="btn-add">
+                        <span class="plus">+</span>
+                        <span class="text">хочу</span>
+                    </button>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="card-visual">
+                    <div class="card-blob"></div>
+                    <span class="card-emoji">🍶</span>
+                </div>
+                <div class="card-info">
+                    <h3>Латте</h3>
+                    <p>Для тех, кто любит помягче</p>
+                </div>
+                <div class="card-bottom">
+                    <span class="price">200 ₽</span>
+                    <button class="btn-add">
+                        <span class="plus">+</span>
+                        <span class="text">хочу</span>
+                    </button>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="card-visual">
+                    <div class="card-blob"></div>
+                    <span class="card-emoji">💧</span>
+                </div>
+                <div class="card-info">
+                    <h3>Американо</h3>
+                    <p>Классика на каждый день</p>
+                </div>
+                <div class="card-bottom">
+                    <span class="price">140 ₽</span>
+                    <button class="btn-add">
+                        <span class="plus">+</span>
+                        <span class="text">хочу</span>
+                    </button>
+                </div>
+            </article>
+
+            <article class="card special">
+                <div class="card-tag">наш</div>
+                <div class="card-visual">
+                    <div class="card-blob"></div>
+                    <span class="card-emoji">💜</span>
+                </div>
+                <div class="card-info">
+                    <h3>Раф лавандовый</h3>
+                    <p>Сливочный с цветочными нотками</p>
+                </div>
+                <div class="card-bottom">
+                    <span class="price">280 ₽</span>
+                    <button class="btn-add">
+                        <span class="plus">+</span>
+                        <span class="text">хочу</span>
+                    </button>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="card-visual">
+                    <div class="card-blob"></div>
+                    <span class="card-emoji">⚡</span>
+                </div>
+                <div class="card-info">
+                    <h3>Флэт уайт</h3>
+                    <p>Двойной заряд под молоком</p>
+                </div>
+                <div class="card-bottom">
+                    <span class="price">220 ₽</span>
+                    <button class="btn-add">
+                        <span class="plus">+</span>
+                        <span class="text">хочу</span>
+                    </button>
+                </div>
+            </article>
+        </div>
+
+        <!-- Десерты -->
+        <div class="menu-grid hidden" id="desserts">
+            <article class="card dessert">
+                <div class="card-visual">
+                    <div class="card-blob pink"></div>
+                    <span class="card-emoji">🍰</span>
+                </div>
+                <div class="card-info">
+                    <h3>Тирамису</h3>
+                    <p>Итальянская классика</p>
+                </div>
+                <div class="card-bottom">
+                    <span class="price">320 ₽</span>
+                    <button class="btn-add pink">
+                        <span class="plus">+</span>
+                        <span class="text">хочу</span>
+                    </button>
+                </div>
+            </article>
+
+            <article class="card dessert featured">
+                <div class="card-tag pink">топ</div>
+                <div class="card-visual">
+                    <div class="card-blob pink"></div>
+                    <span class="card-emoji">🧁</span>
+                </div>
+                <div class="card-info">
+                    <h3>Чизкейк NY</h3>
+                    <p>Тот самый, сливочный</p>
+                </div>
+                <div class="card-bottom">
+                    <span class="price">290 ₽</span>
+                    <button class="btn-add pink">
+                        <span class="plus">+</span>
+                        <span class="text">хочу</span>
+                    </button>
+                </div>
+            </article>
+
+            <article class="card dessert">
+                <div class="card-visual">
+                    <div class="card-blob pink"></div>
+                    <span class="card-emoji">🍩</span>
+                </div>
+                <div class="card-info">
+                    <h3>Донат</h3>
+                    <p>С глазурью на выбор</p>
+                </div>
+                <div class="card-bottom">
+                    <span class="price">180 ₽</span>
+                    <button class="btn-add pink">
+                        <span class="plus">+</span>
+                        <span class="text">хочу</span>
+                    </button>
+                </div>
+            </article>
+
+            <article class="card dessert">
+                <div class="card-visual">
+                    <div class="card-blob pink"></div>
+                    <span class="card-emoji">🌈</span>
+                </div>
+                <div class="card-info">
+                    <h3>Макарон сет</h3>
+                    <p>5 штук разных вкусов</p>
+                </div>
+                <div class="card-bottom">
+                    <span class="price">350 ₽</span>
+                    <button class="btn-add pink">
+                        <span class="plus">+</span>
+                        <span class="text">хочу</span>
+                    </button>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Про нас -->
+    <section class="vibes" id="vibes">
+        <div class="vibes-content">
+            <h2>Мы — <span class="stroke">ЧЁРНЫЙ</span></h2>
+            <p>
+                Открылись в 2019 в гараже на Бауманской.<br>
+                Сейчас нас 11 точек и мы не собираемся останавливаться.<br>
+                <strong>Варим кофе, который пьём сами.</strong>
+            </p>
+            
+            <div class="stats">
+                <div class="stat">
+                    <span class="stat-num">5k+</span>
+                    <span class="stat-label">чашек в неделю</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-num">11</span>
+                    <span class="stat-label">точек</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-num">24/7</span>
+                    <span class="stat-label">некоторые</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="vibes-deco">
+            <span>◉</span>
+        </div>
+    </section>
+
+    <!-- Подвал -->
+    <footer class="footer">
+        <div class="footer-left">
+            <span class="logo-icon">◉</span>
+            <span>ЧЁРНЫЙ</span>
+        </div>
+        <div class="footer-links">
+            <a href="#">тг</a>
+            <a href="#">инста</a>
+            <a href="#">вк</a>
+        </div>
+        <div class="footer-copy">© 2026</div>
+    </footer>
+
+    <!-- Модалка городов -->
+    <div class="modal" id="citiesModal">
+        <div class="modal-box">
+            <button class="modal-close" id="closeCities">✕</button>
+            <h3>Где нас найти</h3>
+            
+            <div class="city-list">
+                <div class="city">
+                    <div class="city-head">
+                        <h4>Москва</h4>
+                        <span class="city-count">5 точек</span>
+                    </div>
+                    <ul>
+                        <li>Бауманская, 15 — круглосуточно</li>
+                        <li>Арбат, 22</li>
+                        <li>Патрики, ул. Спиридоновка 8</li>
+                        <li>Красный Октябрь</li>
+                        <li>Сити, башня Федерация</li>
+                    </ul>
+                </div>
+
+                <div class="city">
+                    <div class="city-head">
+                        <h4>Питер</h4>
+                        <span class="city-count">3 точки</span>
+                    </div>
+                    <ul>
+                        <li>Рубинштейна, 5</li>
+                        <li>Невский, 100</li>
+                        <li>Новая Голландия</li>
+                    </ul>
+                </div>
+
+                <div class="city">
+                    <div class="city-head">
+                        <h4>Казань</h4>
+                        <span class="city-count">2 точки</span>
+                    </div>
+                    <ul>
+                        <li>Баумана, 33</li>
+                        <li>IT-парк</li>
+                    </ul>
+                </div>
+
+                <div class="city">
+                    <div class="city-head">
+                        <h4>Сочи</h4>
+                        <span class="city-count">1 точка</span>
+                    </div>
+                    <ul>
+                        <li>Навагинская, 7</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модалка заказа -->
+    <div class="modal" id="orderModal">
+        <div class="modal-box small">
+            <button class="modal-close" id="closeOrder">✕</button>
+            <div class="order-done">
+                <span class="order-icon">✓</span>
+                <h3>Принято!</h3>
+                <p id="orderDetails"></p>
+                <span class="order-sub">Готовим ☕</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
